@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join the launch list for The Business Engine by Jack Ryan and be notified when the book is released." />
+  <title>The Business Engine | Join the Launch List</title>
+  <style>
+    :root {
+      --bg: #171514;
+      --bg-soft: #211f1d;
+      --text: #f6f3ed;
+      --muted: #c9c3ba;
+      --accent: #9bd443;
+      --accent-dark: #7fb72f;
+      --border: rgba(255,255,255,0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 78% 72%, rgba(155, 212, 67, 0.13), transparent 28%),
+        linear-gradient(135deg, #141311 0%, var(--bg) 55%, #1d1c19 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page {
+      width: min(1200px, calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .mark {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow:
+        10px 0 0 -3px var(--accent),
+        -10px 0 0 -3px var(--accent),
+        0 10px 0 -3px var(--accent);
+      margin-right: 7px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 64px;
+      align-items: center;
+      padding: 72px 0 64px;
+    }
+
+    h1 {
+      font-size: clamp(3.6rem, 8vw, 7rem);
+      line-height: 0.88;
+      margin: 14px 0 28px;
+      text-transform: uppercase;
+      letter-spacing: -0.055em;
+      max-width: 720px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .lead {
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 660px;
+      margin: 0 0 34px;
+    }
+
+    .form-card {
+      background: rgba(255,255,255,0.045);
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 18px;
+      max-width: 660px;
+      backdrop-filter: blur(8px);
+    }
+
+    form {
+      display: flex;
+      gap: 12px;
+    }
+
+    input[type="email"] {
+      flex: 1;
+      min-width: 0;
+      padding: 17px 18px;
+      border-radius: 11px;
+      border: 1px solid rgba(255,255,255,0.17);
+      background: rgba(0,0,0,0.22);
+      color: white;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    input[type="email"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(155,212,67,0.14);
+    }
+
+    button {
+      padding: 17px 22px;
+      border: 0;
+      border-radius: 11px;
+      background: var(--accent);
+      color: #111;
+      font-weight: 900;
+      font-size: 0.98rem;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease;
+      white-space: nowrap;
+    }
+
+    button:hover {
+      background: #ade85a;
+      transform: translateY(-1px);
+    }
+
+    .privacy {
+      margin: 12px 2px 0;
+      font-size: 0.84rem;
+      color: #9e978e;
+    }
+
+    .proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin-top: 28px;
+      color: #ded8d0;
+      font-size: 0.93rem;
+    }
+
+    .proof span::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 900;
+      margin-right: 7px;
+    }
+
+    .visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 560px;
+    }
+
+    .visual::before {
+      content: "";
+      position: absolute;
+      width: 72%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: rgba(155,212,67,0.12);
+      filter: blur(55px);
+    }
+
+    .book {
+      position: relative;
+      width: min(100%, 720px);
+      border-radius: 16px;
+      filter: drop-shadow(0 28px 45px rgba(0,0,0,0.45));
+    }
+
+    footer {
+      padding: 24px 0 30px;
+      border-top: 1px solid var(--border);
+      color: #8f8981;
+      font-size: 0.86rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .success {
+      display: none;
+      color: var(--accent);
+      font-weight: 700;
+      padding: 6px 2px 0;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 52px;
+      }
+
+      .content {
+        text-align: center;
+      }
+
+      .lead, .form-card {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .proof {
+        justify-content: center;
+      }
+
+      .visual {
+        min-height: auto;
+      }
+
+      .book {
+        width: min(92%, 680px);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100% - 28px, 1200px);
+      }
+
+      header {
+        padding: 20px 0;
+      }
+
+      main {
+        padding: 42px 0 44px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 16vw, 4.6rem);
+      }
+
+      form {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .form-card {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand"><span class="mark"></span> SYGNEUS</div>
+      <div class="eyebrow">Coming Soon</div>
+    </header>
+
+    <main>
+      <section class="content">
+        <div class="eyebrow">A new book by Jack Ryan</div>
+        <h1>Turn innovation into <span>commercial success.</span></h1>
+        <p class="lead">
+          <strong>The Business Engine</strong> is a practical guide for founders, scientists and engineers who want to turn technical capability into consistent opportunity, revenue and scalable growth.
+        </p>
+
+        <div class="form-card">
+          <!--
+            Replace the form action with your email platform endpoint,
+            e.g. Mailchimp, Kit, Brevo, HubSpot, Zoho Campaigns, or Formspree.
+          -->
+          <form id="notifyForm" action="#" method="post">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              aria-label="Email address"
+              required
+            />
+            <button type="submit">Notify me at launch</button>
+          </form>
+          <div class="success" id="successMessage">You're on the list. We'll let you know when the book launches.</div>
+          <p class="privacy">No spam. Just launch news and occasional updates about the book.</p>
+        </div>
+
+        <div class="proof">
+          <span>Practical frameworks</span>
+          <span>Built for technical founders</span>
+          <span>Real-world commercial lessons</span>
+        </div>
+      </section>
+
+      <section class="visual" aria-label="The Business Engine book">
+        <img class="book" src="business-engine-book.jpg" alt="The Business Engine by Jack Ryan book cover mock-up" />
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Jack Ryan. All rights reserved.</span>
+      <span>Published in association with Sygneus</span>
+    </footer>
+  </div>
+
+  <script>
+    // Demo behaviour only. Replace this with a real form submission integration.
+    document.getElementById('notifyForm').addEventListener('submit', function (event) {
+      if (this.action.endsWith('#')) {
+        event.preventDefault();
+        this.style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
