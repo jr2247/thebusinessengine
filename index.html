@@ -3,8 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Join the launch list for The Business Engine by Jack Ryan and be notified when the book is released." />
-  <title>The Business Engine | Join the Launch List</title>
+  <meta name="description" content="The Business Engine by Jack Ryan. A practical guide for founders, scientists and engineers turning technical innovation into commercial success. Join the launch list to be notified when the book is released." />
+  <title>The Business Engine by Jack Ryan | Coming Soon</title>
+
+  <meta name="author" content="Jack Ryan" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#171514" />
+  <!-- Add a canonical URL here once the final public domain is confirmed. -->
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Business Engine by Jack Ryan | Coming Soon" />
+  <meta property="og:description" content="Turning technical innovation into commercial success. Join the launch list for The Business Engine by Jack Ryan." />
+  <meta property="og:image" content="book_cover.jpg" />
+  <meta property="og:image:alt" content="The Business Engine by Jack Ryan book cover" />
+  <meta property="og:site_name" content="The Business Engine" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Business Engine by Jack Ryan | Coming Soon" />
+  <meta name="twitter:description" content="Turning technical innovation into commercial success. Join the launch list for The Business Engine by Jack Ryan." />
+  <meta name="twitter:image" content="book_cover.jpg" />
+
   <style>
     :root {
       --bg: #171514;
@@ -33,35 +54,7 @@
       margin: 0 auto;
       min-height: 100vh;
       display: grid;
-      grid-template-rows: auto 1fr auto;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-
-    .mark {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow:
-        10px 0 0 -3px var(--accent),
-        -10px 0 0 -3px var(--accent),
-        0 10px 0 -3px var(--accent);
-      margin-right: 7px;
+      grid-template-rows: 1fr auto;
     }
 
     .eyebrow {
@@ -110,50 +103,14 @@
       backdrop-filter: blur(8px);
     }
 
-    form {
-      display: flex;
-      gap: 12px;
-    }
 
-    input[type="email"] {
-      flex: 1;
-      min-width: 0;
-      padding: 17px 18px;
-      border-radius: 11px;
-      border: 1px solid rgba(255,255,255,0.17);
-      background: rgba(0,0,0,0.22);
-      color: white;
-      font-size: 1rem;
-      outline: none;
-    }
-
-    input[type="email"]:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(155,212,67,0.14);
-    }
-
-    button {
-      padding: 17px 22px;
+    .google-form {
+      display: block;
+      width: 100%;
+      min-height: 647px;
       border: 0;
-      border-radius: 11px;
-      background: var(--accent);
-      color: #111;
-      font-weight: 900;
-      font-size: 0.98rem;
-      cursor: pointer;
-      transition: transform .18s ease, background .18s ease;
-      white-space: nowrap;
-    }
-
-    button:hover {
-      background: #ade85a;
-      transform: translateY(-1px);
-    }
-
-    .privacy {
-      margin: 12px 2px 0;
-      font-size: 0.84rem;
-      color: #9e978e;
+      border-radius: 12px;
+      background: #fff;
     }
 
     .proof {
@@ -208,13 +165,6 @@
       flex-wrap: wrap;
     }
 
-    .success {
-      display: none;
-      color: var(--accent);
-      font-weight: 700;
-      padding: 6px 2px 0;
-    }
-
     @media (max-width: 900px) {
       main {
         grid-template-columns: 1fr;
@@ -231,7 +181,17 @@
         margin-right: auto;
       }
 
-      .proof {
+  
+    .google-form {
+      display: block;
+      width: 100%;
+      min-height: 647px;
+      border: 0;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .proof {
         justify-content: center;
       }
 
@@ -249,24 +209,12 @@
         width: min(100% - 28px, 1200px);
       }
 
-      header {
-        padding: 20px 0;
-      }
-
       main {
         padding: 42px 0 44px;
       }
 
       h1 {
         font-size: clamp(3rem, 16vw, 4.6rem);
-      }
-
-      form {
-        flex-direction: column;
-      }
-
-      button {
-        width: 100%;
       }
 
       .form-card {
@@ -277,12 +225,7 @@
 </head>
 <body>
   <div class="page">
-    <header>
-      <div class="brand"><span class="mark"></span> SYGNEUS</div>
-      <div class="eyebrow">Coming Soon</div>
-    </header>
-
-    <main>
+<main>
       <section class="content">
         <div class="eyebrow">A new book by Jack Ryan</div>
         <h1>Turn innovation into <span>commercial success.</span></h1>
@@ -292,21 +235,26 @@
 
         <div class="form-card">
           <!--
-            Replace the form action with your email platform endpoint,
-            e.g. Mailchimp, Kit, Brevo, HubSpot, Zoho Campaigns, or Formspree.
+            SIMPLE GOOGLE FORMS SETUP
+            -------------------------
+            1. Create a Google Form with one question asking for the buyer's email address.
+            2. In Google Forms, click Send > Embed HTML (< >).
+            3. Copy the URL from the iframe src.
+            4. Replace https://docs.google.com/forms/d/e/1FAIpQLSdk80JI1QWRQk6b9mggjtYVmFSyjO9JoSv60nhblyjyHvgdXA/viewform?embedded=true below with that URL.
+
+            Responses can be linked directly to a private Google Sheet from the
+            Responses tab in Google Forms. The spreadsheet is not exposed publicly.
           -->
-          <form id="notifyForm" action="#" method="post">
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email address"
-              aria-label="Email address"
-              required
-            />
-            <button type="submit">Notify me at launch</button>
-          </form>
-          <div class="success" id="successMessage">You're on the list. We'll let you know when the book launches.</div>
-          <p class="privacy">No spam. Just launch news and occasional updates about the book.</p>
+          <iframe
+            class="google-form"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdk80JI1QWRQk6b9mggjtYVmFSyjO9JoSv60nhblyjyHvgdXA/viewform?embedded=true"
+            title="Join The Business Engine launch list"
+            loading="lazy"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">
+            Loading…
+          </iframe>
         </div>
 
         <div class="proof">
@@ -317,7 +265,7 @@
       </section>
 
       <section class="visual" aria-label="The Business Engine book">
-        <img class="book" src="business-engine-book.jpg" alt="The Business Engine by Jack Ryan book cover mock-up" />
+        <img class="book" src="book_cover.jpg" alt="The Business Engine by Jack Ryan book cover mock-up" />
       </section>
     </main>
 
@@ -326,16 +274,5 @@
       <span>Published in association with Sygneus</span>
     </footer>
   </div>
-
-  <script>
-    // Demo behaviour only. Replace this with a real form submission integration.
-    document.getElementById('notifyForm').addEventListener('submit', function (event) {
-      if (this.action.endsWith('#')) {
-        event.preventDefault();
-        this.style.display = 'none';
-        document.getElementById('successMessage').style.display = 'block';
-      }
-    });
-  </script>
 </body>
 </html>
